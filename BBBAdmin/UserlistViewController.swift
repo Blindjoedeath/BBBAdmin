@@ -29,7 +29,7 @@ class UserlistViewController: UIViewController {
     fileprivate lazy var fetchedResultsController: NSFetchedResultsController<UserInfo> = {
        let fetchRequest: NSFetchRequest<UserInfo> = NSFetchRequest<UserInfo>(entityName: "UserInfo")
         
-        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "firstName", ascending: true)]
+        fetchRequest.sortDescriptors = UserInfo.sortDescriptors()
         
         let fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest,
                                                                   managedObjectContext: managedObjectContext,
@@ -121,6 +121,7 @@ extension UserlistViewController : UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         DispatchQueue.main.async {
+            self.tableView.deselectRow(at: indexPath, animated: true)
             self.performSegue(withIdentifier: "UserInfographics",
                               sender: self.fetchedResultsController.object(at: indexPath))
         }

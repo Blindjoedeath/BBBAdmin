@@ -74,6 +74,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hLa-z9-2Lx">
+                                <rect key="frame" x="114" y="454" width="93" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Ok"/>
+                                <connections>
+                                    <action selector="close" destination="9pv-A4-QxB" eventType="touchUpInside" id="aa7-Z0-CGD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
@@ -82,13 +90,14 @@
                     <connections>
                         <outlet property="audioCountLabel" destination="edn-9g-Equ" id="t2Z-Fb-8In"/>
                         <outlet property="audioMessageCountLabel" destination="qfk-My-Q98" id="JZc-LC-tSS"/>
+                        <outlet property="okButton" destination="hLa-z9-2Lx" id="H0d-5s-Ggm"/>
                         <outlet property="videoCountLabel" destination="0A1-tP-8jX" id="smZ-cS-xDZ"/>
                         <outlet property="videoMessageCountLabel" destination="LBC-PQ-tre" id="EOO-t0-8Q8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1834" y="-164"/>
+            <point key="canvasLocation" x="1833.75" y="-164.78873239436621"/>
         </scene>
         <!--Userlist-->
         <scene sceneID="blj-fv-MS8">

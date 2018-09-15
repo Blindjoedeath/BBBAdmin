@@ -16,6 +16,10 @@ extension UserInfo {
     @nonobjc public class func fetchRequest() -> NSFetchRequest<UserInfo> {
         return NSFetchRequest<UserInfo>(entityName: "UserInfo")
     }
+    
+    public class func sortDescriptors() -> [NSSortDescriptor]{
+        return [NSSortDescriptor(key: "firstName", ascending: true)]
+    }
 
     @NSManaged public var userId: String
     @NSManaged public var firstName: String

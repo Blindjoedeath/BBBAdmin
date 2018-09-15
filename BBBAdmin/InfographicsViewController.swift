@@ -24,6 +24,7 @@ class InfographicsViewController: UIViewController {
     @IBOutlet weak var videoMessageCountLabel : UILabel!
     @IBOutlet weak var audioCountLabel : UILabel!
     @IBOutlet weak var audioMessageCountLabel : UILabel!
+    @IBOutlet weak var okButton : UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +32,7 @@ class InfographicsViewController: UIViewController {
         if let info = userInfo{
             analyzeData(for : info)
         } else {
+            okButton.isHidden = true
             Search.becomeDelegate(self)
             analyzeData()
         }
@@ -38,6 +40,10 @@ class InfographicsViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    @IBAction func close() {
+        dismiss(animated: true, completion: nil)
     }
     
     private func analyzeData(){
