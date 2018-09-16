@@ -75,7 +75,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hLa-z9-2Lx">
-                                <rect key="frame" x="114" y="454" width="93" height="39"/>
+                                <rect key="frame" x="107" y="449" width="93" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Ok"/>
                                 <connections>
@@ -107,8 +107,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cEF-Mn-pWq">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cEF-Mn-pWq">
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <sections/>
                                 <connections>
@@ -131,13 +132,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="cEF-Mn-pWq" firstAttribute="leading" secondItem="mEX-ra-f7o" secondAttribute="leading" id="3He-89-HCa"/>
                             <constraint firstItem="nlT-h2-C1g" firstAttribute="trailing" secondItem="mEX-ra-f7o" secondAttribute="trailing" id="GSy-nL-YhJ"/>
-                            <constraint firstItem="cEF-Mn-pWq" firstAttribute="trailing" secondItem="mEX-ra-f7o" secondAttribute="trailing" id="TSO-P8-vsj"/>
                             <constraint firstItem="nlT-h2-C1g" firstAttribute="top" secondItem="mEX-ra-f7o" secondAttribute="top" id="VUA-r3-Wke"/>
-                            <constraint firstItem="cEF-Mn-pWq" firstAttribute="top" secondItem="PM1-Vq-Qmx" secondAttribute="top" id="qif-5E-LZH"/>
                             <constraint firstItem="nlT-h2-C1g" firstAttribute="leading" secondItem="mEX-ra-f7o" secondAttribute="leading" id="rIl-Iv-aaM"/>
-                            <constraint firstAttribute="bottom" secondItem="cEF-Mn-pWq" secondAttribute="bottom" id="rdu-YN-pji"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mEX-ra-f7o"/>
                     </view>

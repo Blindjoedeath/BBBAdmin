@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3D38FD48214B185300EDC426 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D38FD47214B185300EDC426 /* Functions.swift */; };
+		3D48652B214EECFA004CCC81 /* RjumanSpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D48652A214EECFA004CCC81 /* RjumanSpinnerView.swift */; };
 		3D560BAD214C1B1F007A5814 /* Secret.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D560BAC214C1B1F007A5814 /* Secret.swift */; };
 		3DA9809A214A731800A987BF /* UserInfo+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA98099214A731800A987BF /* UserInfo+Decodable.swift */; };
 		3DA9809C214A743C00A987BF /* Settings+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA9809B214A743C00A987BF /* Settings+Decodable.swift */; };
@@ -17,6 +18,7 @@
 		3DA980B1214A997E00A987BF /* Settings+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA980AD214A997E00A987BF /* Settings+CoreDataClass.swift */; };
 		3DA980B2214A997E00A987BF /* Settings+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA980AE214A997E00A987BF /* Settings+CoreDataProperties.swift */; };
 		3DA980B4214AF9C600A987BF /* InfographicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA980B3214AF9C600A987BF /* InfographicsViewController.swift */; };
+		3DC9649B214D704500568AFB /* RjumanSpinnerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DC9649A214D704500568AFB /* RjumanSpinnerView.xib */; };
 		3DE21AA021469BDD001D386A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE21A9F21469BDD001D386A /* AppDelegate.swift */; };
 		3DE21AA721469BDD001D386A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DE21AA521469BDD001D386A /* Main.storyboard */; };
 		3DE21AA921469BDF001D386A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DE21AA821469BDF001D386A /* Assets.xcassets */; };
@@ -29,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		3D38FD47214B185300EDC426 /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
+		3D48652A214EECFA004CCC81 /* RjumanSpinnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RjumanSpinnerView.swift; sourceTree = "<group>"; };
 		3D560BAC214C1B1F007A5814 /* Secret.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secret.swift; sourceTree = "<group>"; };
 		3DA98099214A731800A987BF /* UserInfo+Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserInfo+Decodable.swift"; sourceTree = "<group>"; };
 		3DA9809B214A743C00A987BF /* Settings+Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Settings+Decodable.swift"; sourceTree = "<group>"; };
@@ -38,6 +41,7 @@
 		3DA980AD214A997E00A987BF /* Settings+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Settings+CoreDataClass.swift"; sourceTree = "<group>"; };
 		3DA980AE214A997E00A987BF /* Settings+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Settings+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		3DA980B3214AF9C600A987BF /* InfographicsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfographicsViewController.swift; sourceTree = "<group>"; };
+		3DC9649A214D704500568AFB /* RjumanSpinnerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RjumanSpinnerView.xib; sourceTree = "<group>"; };
 		3DE21A9C21469BDD001D386A /* BBBAdmin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BBBAdmin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DE21A9F21469BDD001D386A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DE21AA621469BDD001D386A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -88,6 +92,7 @@
 				3DA9809B214A743C00A987BF /* Settings+Decodable.swift */,
 				3DE21A9F21469BDD001D386A /* AppDelegate.swift */,
 				3DE21AA521469BDD001D386A /* Main.storyboard */,
+				3DC9649A214D704500568AFB /* RjumanSpinnerView.xib */,
 				3DE21AA821469BDF001D386A /* Assets.xcassets */,
 				3DE21AAA21469BDF001D386A /* LaunchScreen.storyboard */,
 				3DE21AAD21469BDF001D386A /* Info.plist */,
@@ -99,6 +104,7 @@
 				3DA980B3214AF9C600A987BF /* InfographicsViewController.swift */,
 				3D38FD47214B185300EDC426 /* Functions.swift */,
 				3D560BAC214C1B1F007A5814 /* Secret.swift */,
+				3D48652A214EECFA004CCC81 /* RjumanSpinnerView.swift */,
 			);
 			path = BBBAdmin;
 			sourceTree = "<group>";
@@ -162,6 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DE21ABC2146ACFE001D386A /* UserInfoCell.xib in Resources */,
+				3DC9649B214D704500568AFB /* RjumanSpinnerView.xib in Resources */,
 				3DE21AAC21469BDF001D386A /* LaunchScreen.storyboard in Resources */,
 				3DE21AA921469BDF001D386A /* Assets.xcassets in Resources */,
 				3DE21AA721469BDD001D386A /* Main.storyboard in Resources */,
@@ -186,6 +193,7 @@
 				3DE21AB82146AA59001D386A /* Search.swift in Sources */,
 				3DA980B1214A997E00A987BF /* Settings+CoreDataClass.swift in Sources */,
 				3DA9809C214A743C00A987BF /* Settings+Decodable.swift in Sources */,
+				3D48652B214EECFA004CCC81 /* RjumanSpinnerView.swift in Sources */,
 				3DA980B2214A997E00A987BF /* Settings+CoreDataProperties.swift in Sources */,
 				3DA980AA214A98E500A987BF /* DataModel.xcdatamodeld in Sources */,
 				3DE21AB62146A695001D386A /* UserlistViewController.swift in Sources */,

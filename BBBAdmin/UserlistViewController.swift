@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import Foundation
 
 class UserlistViewController: UIViewController {
     
@@ -17,11 +18,12 @@ class UserlistViewController: UIViewController {
     
     struct UserlistViewIdentifiers{
         static let userInfoCell  = "UserInfoCell"
+        static let rjumanSpinnerView = "RjumanSpinnerView"
     }
     
     private var filteredData : [UserInfo] = []
     private var isSearching = false
-    
+    private var rjumanSpinnerView : RjumanSpinnerView!
     private var refreshControl : UIRefreshControl!
     
     var managedObjectContext : NSManagedObjectContext!
@@ -39,6 +41,7 @@ class UserlistViewController: UIViewController {
         
         return fetchedResultsController
     }()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,8 +82,15 @@ class UserlistViewController: UIViewController {
     
     func addRefreshControl(){
         refreshControl = UIRefreshControl()
-        refreshControl.tintColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
+        refreshControl.tintColor = UIColor.clear
+        refreshControl.backgroundColor = UIColor.clear
         refreshControl.addTarget(self, action: #selector(requestSearch), for: .valueChanged)
+        rjumanSpinnerView = Bundle.main.loadNibNamed(UserlistViewIdentifiers.rjumanSpinnerView, owner: self, options: nil)?.first as! RjumanSpinnerView
+        
+        refreshControl.addSubview(rjumanSpinnerView)
+        
+        rjumanSpinnerView.frame = refreshControl.frame
+        rjumanSpinnerView.backgroundColor = UIColor.clear
         
         tableView.refreshControl = refreshControl
         
@@ -102,6 +112,7 @@ class UserlistViewController: UIViewController {
     func requestSearch(){
         print("perform request")
         Search.performSearch()
+        rjumanSpinnerView.startAnimation()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -296,6 +307,7 @@ extension UserlistViewController : SearchListenerDelegate{
             present(networkErrorAlert(), animated: true, completion: nil)
         }
         
+        rjumanSpinnerView.stopAnimation()
         tableView.reloadData()
         refreshControl.endRefreshing()
     }
