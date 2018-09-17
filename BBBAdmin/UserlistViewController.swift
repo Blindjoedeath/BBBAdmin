@@ -71,7 +71,7 @@ class UserlistViewController: UIViewController {
         do {
             try fetchedResultsController.performFetch()
         } catch {
-            print("hooly")
+            print("mdems")
         }
     }
     
@@ -110,14 +110,12 @@ class UserlistViewController: UIViewController {
     
     @objc
     func requestSearch(){
-        print("perform request")
         Search.performSearch()
         rjumanSpinnerView.startAnimation()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "UserInfographics"{
-            print("here 2 ")
             let infographicsViewController = segue.destination as! InfographicsViewController
             infographicsViewController.userInfo = sender as! UserInfo
         }
@@ -174,7 +172,6 @@ extension UserlistViewController: UITableViewDataSource {
 extension UserlistViewController : NSFetchedResultsControllerDelegate {
     
     func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-        print("*** controllerWillChangeContent")
         tableView.beginUpdates()
     }
     
@@ -184,20 +181,16 @@ extension UserlistViewController : NSFetchedResultsControllerDelegate {
         
         switch type {
         case .insert:
-            print("*** NSFetchedResultsChangeInsert (object)")
             tableView.insertRows(at: [newIndexPath!], with: .fade)
         case .delete:
-            print("*** NSFetchedResultsChangeDelete (object)")
             tableView.deleteRows(at: [indexPath!], with: .fade)
         case .update:
-            print("*** NSFetchedResultsChangeUpdate (object)")
             if let cell = tableView.cellForRow(at: indexPath!)
                 as? UserInfoCell {
                 let userInfo = controller.object(at: indexPath!) as! UserInfo
                 cell.configure(userInfo, at: indexPath!.row + 1)
             }
         case .move:
-            print("*** NSFetchedResultsChangeMove (object)")
             tableView.deleteRows(at: [indexPath!], with: .fade)
             tableView.insertRows(at: [newIndexPath!], with: .fade)
         }
@@ -210,23 +203,18 @@ extension UserlistViewController : NSFetchedResultsControllerDelegate {
 
         switch type {
         case .insert:
-            print("*** NSFetchedResultsChangeInsert (section)")
             tableView.insertSections(IndexSet(integer: sectionIndex),
                                      with: .fade)
         case .delete:
-            print("*** NSFetchedResultsChangeDelete (section)")
             tableView.deleteSections(IndexSet(integer: sectionIndex),
                                      with: .fade)
-        case .update:
-            print("*** NSFetchedResultsChangeUpdate (section)")
-        case .move:
-            print("*** NSFetchedResultsChangeMove (section)")
+        default:
+            break
         }
     }
     func controllerDidChangeContent(
         _ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-          
-        print("*** controllerDidChangeContent")
+        
         tableView.endUpdates()
     }
 }
@@ -240,8 +228,6 @@ extension UserlistViewController : UISearchBarDelegate {
     }
     
     func setDarkViewState(_ state : Bool){
-        
-//        darkView.isUserInteractionEnabled = state
         darkView.isHidden = !state
         
         var alpha = 0.0
@@ -307,9 +293,10 @@ extension UserlistViewController : SearchListenerDelegate{
             present(networkErrorAlert(), animated: true, completion: nil)
         }
         
-        rjumanSpinnerView.stopAnimation()
-        tableView.reloadData()
-        refreshControl.endRefreshing()
+        rjumanSpinnerView.stopAnimation(){
+            self.refreshControl.endRefreshing()
+            self.tableView.reloadData()
+        }
     }
 }
 

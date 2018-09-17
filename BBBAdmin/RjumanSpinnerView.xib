@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,28 +17,30 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rjuman" translatesAutoresizingMaskIntoConstraints="NO" id="Q9H-Ab-xYZ">
-                    <rect key="frame" x="155" y="27" width="64" height="46"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rjuman" translatesAutoresizingMaskIntoConstraints="NO" id="Q9H-Ab-xYZ">
+                    <rect key="frame" x="152" y="25.5" width="71" height="50"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="46" id="DQB-CG-Ix7"/>
-                        <constraint firstAttribute="width" constant="64" id="FCt-0c-vXy"/>
+                        <constraint firstAttribute="width" secondItem="Q9H-Ab-xYZ" secondAttribute="height" multiplier="93:65" id="2pJ-Zx-SDk"/>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="lpx-j8-4I9"/>
                     </constraints>
                 </imageView>
             </subviews>
-            <color key="backgroundColor" red="1" green="0.9805709813843172" blue="0.97784350034169598" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="Q9H-Ab-xYZ" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="FXI-KD-M0s"/>
-                <constraint firstItem="Q9H-Ab-xYZ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="a3Y-5n-D6e"/>
+                <constraint firstItem="Q9H-Ab-xYZ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Lyj-B0-0pc"/>
+                <constraint firstItem="Q9H-Ab-xYZ" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Z66-UM-bUM"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Q9H-Ab-xYZ" secondAttribute="bottom" id="i45-l7-P4B"/>
+                <constraint firstItem="Q9H-Ab-xYZ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="vUN-kp-3ea" secondAttribute="top" id="nVG-sL-6Ca"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="rjumanView" destination="Q9H-Ab-xYZ" id="rhm-Ad-n8K"/>
             </connections>
-            <point key="canvasLocation" x="24.5" y="-170"/>
+            <point key="canvasLocation" x="17.5" y="-161"/>
         </view>
     </objects>
     <resources>
-        <image name="rjuman" width="165" height="118"/>
+        <image name="Rjuman" width="93" height="65"/>
     </resources>
 </document>

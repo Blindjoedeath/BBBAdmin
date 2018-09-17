@@ -54,7 +54,6 @@ class Search {
                 httpResponse.statusCode == 200,
                 let jsonData = data,
                 let parsedInfos = self.parse(json: jsonData){
-                print(String(data: jsonData, encoding: String.Encoding.utf8))
                 
                 success = true
                 self.addParsedToDataBase(parsedInfos)
@@ -131,7 +130,6 @@ class Search {
                 if Search.managedObjectContext.hasChanges{
                     try Search.managedObjectContext.save()
                 }
-                print("Saved")
             } catch{
                 print("Что то не то")
             }
