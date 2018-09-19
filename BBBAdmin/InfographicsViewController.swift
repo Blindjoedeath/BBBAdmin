@@ -8,6 +8,8 @@
 
 import UIKit
 import CoreData
+import AVFoundation
+import AVKit
 
 class InfographicsViewController: UIViewController {
     
@@ -25,6 +27,10 @@ class InfographicsViewController: UIViewController {
     @IBOutlet weak var audioCountLabel : UILabel!
     @IBOutlet weak var audioMessageCountLabel : UILabel!
     @IBOutlet weak var okButton : UIButton!
+    @IBOutlet weak var audioButton : UIButton!
+    @IBOutlet weak var videoButton : UIButton!
+    
+    var player : AVAudioPlayer!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +39,8 @@ class InfographicsViewController: UIViewController {
             analyzeData(for : info)
         } else {
             okButton.isHidden = true
+            audioButton.isUserInteractionEnabled = false
+            videoButton.isUserInteractionEnabled = false
             Search.becomeDelegate(self)
             analyzeData()
         }
@@ -87,11 +95,64 @@ class InfographicsViewController: UIViewController {
         videoMessageCountLabel.text = String(videoMessageCount)
         audioCountLabel.text = String(audioCount)
         audioMessageCountLabel.text = String(audioMessageCount)
+        
+//        let url = URL(string: "http://80.211.8.79/Home/Test/")
+        
+  //      downloadFileFromURL(url: url!)
+    }
+    
+    func downloadFileFromURL(url: URL){
+        
+        var downloadTask:URLSessionDownloadTask
+        downloadTask = URLSession.shared.downloadTask(with: url, completionHandler: { [weak self](URL, response, error) -> Void in
+            if let error = error{
+                print(error)
+            }
+            self?.play(url: URL!)
+        })
+        
+        downloadTask.resume()
+    }
+    
+    func play(url:URL) {
+        print("playing \(url)")
+        
+        do {
+            self.player = try AVAudioPlayer(contentsOf: url)
+            player.prepareToPlay()
+            player.volume = 1.0
+            player.play()
+        } catch let error as NSError {
+            //self.player = nil
+            print(error.localizedDescription)
+        } catch {
+            print("AVAudioPlayer init failed")
+        }
     }
     
     deinit{
         print("deinit")
     }
+    
+    @IBAction func loadAudios(){
+        performSegue(withIdentifier: "ContentListSegue", sender: ContentListViewController.ContentType.audio)
+    }
+    
+    @IBAction func loadVideos(){
+        performSegue(withIdentifier: "ContentListSegue", sender: ContentListViewController.ContentType.video)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ContentListSegue"{
+            let navigationController = segue.destination as! UINavigationController
+            let contentListViewController = navigationController.topViewController as! ContentListViewController
+            
+            contentListViewController.contentType = sender as! ContentListViewController.ContentType
+            
+            contentListViewController.userId = userInfo!.userId
+        }
+    }
+    
 }
 
 extension InfographicsViewController : SearchListenerDelegate{

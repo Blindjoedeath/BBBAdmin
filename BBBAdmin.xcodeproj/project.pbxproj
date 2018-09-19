@@ -10,6 +10,7 @@
 		3D38FD48214B185300EDC426 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D38FD47214B185300EDC426 /* Functions.swift */; };
 		3D48652B214EECFA004CCC81 /* RjumanSpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D48652A214EECFA004CCC81 /* RjumanSpinnerView.swift */; };
 		3D560BAD214C1B1F007A5814 /* Secret.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D560BAC214C1B1F007A5814 /* Secret.swift */; };
+		3D97E6AE2151A381007B0092 /* ContentListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D97E6AD2151A381007B0092 /* ContentListViewController.swift */; };
 		3DA9809A214A731800A987BF /* UserInfo+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA98099214A731800A987BF /* UserInfo+Decodable.swift */; };
 		3DA9809C214A743C00A987BF /* Settings+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA9809B214A743C00A987BF /* Settings+Decodable.swift */; };
 		3DA980AA214A98E500A987BF /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3DA980A8214A98E500A987BF /* DataModel.xcdatamodeld */; };
@@ -33,6 +34,7 @@
 		3D38FD47214B185300EDC426 /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		3D48652A214EECFA004CCC81 /* RjumanSpinnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RjumanSpinnerView.swift; sourceTree = "<group>"; };
 		3D560BAC214C1B1F007A5814 /* Secret.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secret.swift; sourceTree = "<group>"; };
+		3D97E6AD2151A381007B0092 /* ContentListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentListViewController.swift; sourceTree = "<group>"; };
 		3DA98099214A731800A987BF /* UserInfo+Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserInfo+Decodable.swift"; sourceTree = "<group>"; };
 		3DA9809B214A743C00A987BF /* Settings+Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Settings+Decodable.swift"; sourceTree = "<group>"; };
 		3DA980A9214A98E500A987BF /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				3D38FD47214B185300EDC426 /* Functions.swift */,
 				3D560BAC214C1B1F007A5814 /* Secret.swift */,
 				3D48652A214EECFA004CCC81 /* RjumanSpinnerView.swift */,
+				3D97E6AD2151A381007B0092 /* ContentListViewController.swift */,
 			);
 			path = BBBAdmin;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D97E6AE2151A381007B0092 /* ContentListViewController.swift in Sources */,
 				3DA980B0214A997E00A987BF /* UserInfo+CoreDataProperties.swift in Sources */,
 				3D560BAD214C1B1F007A5814 /* Secret.swift in Sources */,
 				3DA9809A214A731800A987BF /* UserInfo+Decodable.swift in Sources */,
